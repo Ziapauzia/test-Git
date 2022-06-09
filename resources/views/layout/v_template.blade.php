@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>AdminLTE 2 | Blank Page</title>
+<title>Laravel 8 | @yield('title')</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
 name="viewport">
@@ -213,20 +213,9 @@ class="fa fa-search"></i>
 </form>
 <!-- /.search form -->
 <!-- sidebar menu: : style can be found in sidebar.less -->
-<ul class="sidebar-menu" data-widget="tree">
-<li class="header">MAIN NAVIGATION</li>
-<li><a href="https://adminlte.io/docs"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
-<li class="treeview">
-<a href="#">
-<i class="fa fa-share"></i> <span>Multilevel</span>
-<span class="pull-right-container">
-<i class="fa fa-angle-left pull-right"></i>
-</span>
-</a>
-<ul class="treeview-menu">
-<li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-<li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-</ul>
+
+@include ('layout/v_nav')
+
 </li>
 <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i>
 <span>Documentation</span></a></li>
@@ -240,38 +229,14 @@ class="fa fa-search"></i>
 <!-- Content Header (Page header) -->
 <section class="content-header">
 <h1>
-Blank page
-<small>it all starts here</small>
+    @yield('title')
 </h1>
-<ol class="breadcrumb">
-<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-<li><a href="#">Examples</a></li>
-<li class="active">Blank page</li>
-</ol>
+
 </section>
 <!-- Main content -->
 <section class="content">
-<!-- Default box -->
-<div class="box">
-<div class="box-header with-border">
-<h3 class="box-title">Title</h3>
-<div class="box-tools pull-right">
-<button type="button" class="btn btn-box-tool" data-widget="collapse" datatoggle="tooltip"
-title="Collapse">
-<i class="fa fa-minus"></i></button><button type="button" class="btn btn-box-tool" data-widget="remove" datatoggle="tooltip" title="Remove">
-<i class="fa fa-times"></i></button>
-</div>
-</div>
-<div class="box-body">
-Start creating your amazing application!
-</div>
-<!-- /.box-body -->
-<div class="box-footer">
-Footer
-</div>
-<!-- /.box-footer-->
-</div>
-<!-- /.box -->
+    @yield ('content')
+
 </section>
 <!-- /.content -->
 </div>
